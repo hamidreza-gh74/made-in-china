@@ -1,0 +1,27 @@
+@import "../../../styles/responsive.scss";
+$mobile_sup: 365px;
+
+
+.Find_Comment_h {
+  @include responsive($mobile_sup) {
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  height: auto;
+  margin: 10px 0;
+
+  border-top: 1px solid #eeee ;
+  border-bottom: 1px solid #eeee ;
+
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: justify;
+
+  padding: 15px 0;
+  padding-right: 15px;
+
+}

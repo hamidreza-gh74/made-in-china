@@ -1,0 +1,64 @@
+.base {
+  width: 33%;
+  min-width: 250px;
+  height: 126px;
+  display: flex;
+  position: relative;
+
+  .expand {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0 10px rgb(128, 125, 125);
+    z-index: 100;
+    background-color: white;
+  }
+  .card_containar {
+    width: 33%;
+    min-width: 250px;
+    height: auto;
+    padding: 10px 10px;
+    display: flex;
+    margin-top: 15px;
+
+    .right {
+      width: 48px;
+      margin-right: 20px;
+      .picture {
+        display: block;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      line-height: 18px;
+      margin-top: 5px;
+      .titr {
+        font-size: 0.75rem;
+        font-weight: 700;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .text {
+        font-size: 0.75rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .more {
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../../../styles//responsive.scss";
+$mobile_sup: 365px;
+
+.section_containar_h {
+  @include responsive($mobile_sup) {
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  height: auto;
+
+  .popular_section_containar_h {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 15px 0px;
+
+    .popular_section_item_h {
+      @include responsive($mobile_sup) {
+        width: 50%;
+      }
+      @include responsive($tablet) {
+        width: 30%;
+      }
+      @include responsive($laptop) {
+        width: 20%;
+      }
+
+      font-size: 0.75rem;
+      line-height: 18px;
+      margin-bottom: 8px;
+
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}

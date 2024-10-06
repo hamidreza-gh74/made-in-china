@@ -1,0 +1,138 @@
+@import "../../../styles/responsive.scss";
+
+$mobile_sup: 365px;
+
+
+.find_industrial_zone_containar_h {
+  @include responsive($mobile_sup) {
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  height: auto;
+  border: 1px solid #eeee;
+  margin: 5px 0;
+
+  .find_industrial_zone_menu_h {
+    display: flex;
+
+    width: 100%;
+    height: 40px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+
+    .zone_menu_item_mob_h {
+      @include responsive($laptop) {
+        display: none;
+      }
+      width: fit-content;
+      height: 100%;
+      font-size: 0.77rem;
+      padding: 5px 4px;
+
+      .zone_menu_mob_btn_h {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: fit-content;
+        padding: 0px 10px;
+        height: 100%;
+        position: relative;
+        box-shadow: 0 0 10px #c9c6c6ee;
+        &:hover {
+          background-color: rgb(183, 180, 180);
+        }
+        .mob_drawer_hidden_h {
+          display: none;
+        }
+        .zone_menu_mob_drawer_h {
+          width: 200px;
+          height: auto;
+          position: absolute;
+
+          @include responsive($mobile_sup) {
+            top: 100%;
+            left: 0;
+            z-index: 100;
+            background-color: white;
+            box-shadow: 0 0 10px #d3cfcfee;
+          }
+          @include responsive($tablet) {
+            top: 0;
+            left: 100%;
+          }
+
+          .mob_drawer_item_h {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 20px;
+            font-size: 0.65rem;
+            &:hover {
+              background-color: rgba(159, 161, 159, 0.6);
+            }
+          }
+        }
+      }
+    }
+
+    .find_industrial_zone_menuitem_h {
+      @include responsive(0) {
+        display: none;
+      }
+
+      @include responsive($laptop) {
+        width: 25%;
+        display: flex;
+      }
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      height: 100%;
+
+      font-size: 0.75rem;
+      line-height: 21px;
+      border: 1.3px solid #eeee;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    .select_h {
+      background-color: white;
+      border-bottom: none;
+    }
+  }
+
+  .find_industrial_zone_main_h {
+    display: flex;
+    align-items: flex-end;
+
+    @include responsive($mobile_sup) {
+      flex-direction: column;
+      .more_card_zone_h {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      }
+    }
+
+    @include responsive($laptop) {
+      flex-direction: row;
+      .more_card_zone_h {
+        justify-content: center;
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

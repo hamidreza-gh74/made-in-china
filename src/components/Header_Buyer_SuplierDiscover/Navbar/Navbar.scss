@@ -1,0 +1,136 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+$mobile_sup: 365px;
+
+
+.navbar_containar {
+  @include responsive(0) {
+    display: none;
+  }
+  @include responsive($tablet) {
+    display: flex;
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  display: flex;
+  border: 1.5px solid #d9d9d9;
+  border-bottom: 2px solid red;
+
+  .navbar_item {
+    @include responsive($mobile_sup) {
+      width: 20%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.90rem;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+    @include responsive($laptop) {
+      font-size: 1rem;
+
+    }
+
+    padding: 5px 10px;
+
+    line-height: 1.31rem;
+    text-align: center;
+
+    text-transform: capitalize;
+    border-right: 1.5px solid #d9d9d9;
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+// .................. mobile design .....................
+
+.navbar_containar_mob {
+  @include responsive(0) {
+    display: flex;
+  }
+  @include responsive($tablet) {
+    display: none;
+  }
+  width: 97%;
+
+  .menu {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  .drawer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px #888585;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 300ms;
+
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    .content_drawer {
+      margin-top: 20px;
+      .items_mob {
+        width: 90%;
+        padding: 10px 10px;
+        font-size: 0.87rem;
+        line-height: 1.31rem;
+        text-align: center;
+        text-transform: capitalize;
+
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .close_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background-color: rgb(174, 169, 169);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+  .drawer_open {
+    top: -10px;
+    left: 0;
+  }
+}

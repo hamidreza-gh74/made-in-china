@@ -1,0 +1,64 @@
+
+@import "../../../../styles/responsive.scss";
+
+$mobile_sup: 365px;
+
+.zone_more_card_h {
+  padding: 8px 0px;
+  width: 20%;
+  @include responsive($mobile_sup) {
+    min-width: 170px;
+
+  }
+  @include responsive($tablet) {
+    min-width: 198px;
+
+ 
+  }
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-align: left;
+
+  .zone_more_pic_h {
+    display: block;
+    height: 45%;
+    object-fit: cover;
+  }
+
+  .zone_more_titr_h {
+    display: block;
+    width: 80%;
+    color: #246bb3;
+    font-size: 0.75rem;
+    line-height: 18px;
+    text-align: left;
+    &:hover {
+      color: orange;
+    }
+  }
+
+  .zone_more_coment_h {
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .coment_part_h {
+      display: block;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  .zone_more_icon_h {
+    display: flex;
+    width: 80%;
+    gap: 5px;
+  }
+}

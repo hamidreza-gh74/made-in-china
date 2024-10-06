@@ -1,0 +1,35 @@
+@import "../../../styles/responsive.scss";
+
+$mobile_sup: 365px;
+
+
+.popular_search_containar_h {
+  @include responsive($mobile_sup) {
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  height: auto;
+  margin: 10px 0;
+
+
+  .popular_search_more_h{
+
+
+    font-size-adjust: 0.75px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #246bb3;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+    &:hover{
+      color: orange;
+      text-decoration: none;
+    }
+  }
+}

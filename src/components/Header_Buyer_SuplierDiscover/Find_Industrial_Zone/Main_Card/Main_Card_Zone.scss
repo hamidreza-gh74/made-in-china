@@ -1,0 +1,100 @@
+@import "../../../../styles/responsive.scss";
+
+$mobile_sup: 365px;
+
+
+.main_card_zone_h {
+  @include responsive($mobile_sup) {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+
+  }
+
+  @include responsive($laptop) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 25%;
+    height: 345px;
+  }
+  align-items: flex-start;
+  text-align: left;
+
+  .zone_content_h {
+    @include responsive($mobile_sup) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 10px 0;
+      padding-left: 10px;
+    }
+    @include responsive($laptop) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 40%;
+    }
+    z-index: 2;
+    padding-left: 30px;
+
+    .zone_feature_h {
+      font-size: 1.12rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      line-height: 27px;
+      margin-bottom: 10px;
+      height: 100%;
+     
+    }
+
+    .zone_ul_h {
+      .zone_li_h {
+        font-size: 0.65rem;
+        line-height: 18px;
+        list-style: none;
+      }
+    }
+
+    .zone_more_h {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-left: 30px;
+      cursor: pointer;
+      a {
+        display: block;
+
+        font-size: 0.65rem;
+        color: #246bb3;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+
+  .zone_picture_h {
+    @include responsive($mobile_sup) {
+      display: none;
+    }
+
+    @include responsive($laptop) {
+      display: block;
+      width: 100%;
+      height: 60%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

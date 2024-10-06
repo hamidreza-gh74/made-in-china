@@ -1,0 +1,67 @@
+
+@use "variables" as *;
+@font-face {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   src: url(../../public/assets/Fonts/Roboto-Regular.eot) format("eot");
+   src: url(../../public/assets/Fonts/Roboto-Regular.ttf) format("ttf");
+   src: url(../../public/assets/Fonts//assets/Fonts/Roboto-Regular.woff) format("woff");
+   src: url(../../public/assets/Fonts//assets/Fonts/Roboto-Regular.woff2) format("woff2");
+}
+* {
+  font-family: roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+  // font-size: 14px;
+  // line-height: 1.5;
+  // font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background-color: #eeee;
+  position: relative;
+}
+
+input {
+  display: flex;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0 8px;
+  font-size: 1em;
+  font-weight: 400;
+  &::placeholder {
+    font-size: 1em;
+    font-weight: 500;
+    color: lightgray;
+  }
+}
+
+button {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+}
+
+hr {
+  height: 10px;
+  background-color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  // opacity: $opacity-high;
+}

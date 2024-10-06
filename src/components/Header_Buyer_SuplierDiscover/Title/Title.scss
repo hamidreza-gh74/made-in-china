@@ -1,0 +1,29 @@
+@import "../../../styles/responsive.scss";
+$mobile_sup: 365px;
+
+.titr_containar {
+  @include responsive($mobile_sup) {
+    width: 97%;
+  }
+  @include responsive($laptop) {
+    width: 97%;
+    max-width: 992px;
+  }
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+  align-items: left;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+
+  .link {
+    display: block;
+    &:hover{
+      color: orange;
+    }
+  }
+}
